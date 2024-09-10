@@ -60,19 +60,45 @@ Reviews Analysis: Analyze user reviews and feedback to improve service and offer
 User Management: Manage user accounts, including creating, updating, and deleting user profiles.
 
 Technologies Used:
+
+
+
+
 Frontend: React.js
 Backend: Node.js, Express
 Database: MongoDB
 Authentication: JWT
 
 Installation
+
+
+
+
 Clone the Repository:
+
+
+
+
 git clone https://github.com/yourusername/canteen-management-system.git
 
+
+
+
 Navigate to the Project Directory:
+
+
+
+
 cd canteen-management-system
 
 Install Dependencies:
+
+
+
+
 For the frontend:
+
+
+
 cd frontend
 npm install
