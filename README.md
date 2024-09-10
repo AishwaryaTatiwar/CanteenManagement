@@ -86,6 +86,9 @@ Installation
 
 
 
+Navigate to the Project Directory
+
+
 
 Clone the Repository:
 
@@ -95,14 +98,6 @@ Clone the Repository:
 git clone https://github.com/yourusername/canteen-management-system.git
 
 
-
-
-Navigate to the Project Directory:
-
-
-
-
-cd folder-name
 
 
 Install Dependencies:
