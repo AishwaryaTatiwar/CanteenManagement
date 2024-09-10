@@ -59,15 +59,28 @@ Reviews Analysis: Analyze user reviews and feedback to improve service and offer
 
 User Management: Manage user accounts, including creating, updating, and deleting user profiles.
 
+
 Technologies Used:
 
 
 
 
 Frontend: React.js
+
+
+
 Backend: Node.js, Express
+
+
+
 Database: MongoDB
+
+
+
 Authentication: JWT
+
+
+
 
 Installation
 
@@ -89,10 +102,10 @@ Navigate to the Project Directory:
 
 
 
-cd canteen-management-system
+cd folder-name
+
 
 Install Dependencies:
-
 
 
 
@@ -101,4 +114,8 @@ For the frontend:
 
 
 cd frontend
+
+
+
+
 npm install
