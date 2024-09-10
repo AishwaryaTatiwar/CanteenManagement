@@ -3,6 +3,10 @@ Overview:
 The Canteen Management System is designed to streamline the operations of a canteen, offering separate interfaces for users and administrators. The user app provides features for menu browsing, account management, and order placement, while the admin panel offers tools for managing orders, menus, inventory, and more.
 
 Features:
+
+
+
+
 User App:
 Login/Signup: Users can create accounts and log in to access personalized features.
 Menu: Browse the canteen's menu, view items, and check prices.
