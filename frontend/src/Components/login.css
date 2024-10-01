@@ -1,0 +1,88 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('C:\Users\Dell\Downloads\Miniproject\frontend\frontend\src\Components\Images\food.avif');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Login container style */
+  .login-container {
+    background-color:rgba(244, 109, 6, 0.972);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-left: 500px;
+    height:350px
+  }
+  
+  /* Input fields style */
+  .input-group {
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .btn{
+    border-radius: 20px;
+    background-color: #fff;
+    margin-left: 35%;
+    width:30%;
+    height: 20%;
+    border-color: blanchedalmond;
+  }
+  .btn:hover{
+    color: rgba(244, 109, 6, 0.972);
+    cursor: pointer;
+  }
+  .signup{
+    display: flex;
+  }
+  .signup-btn{
+    height:20%;
+    margin-top: 6%;
+    margin-left: 10%;
+    background-color: #fff;
+    border-color: blanchedalmond;
+    border-radius: 20px;
+    width:27%;
+  }
+  .signup-btn:hover{
+    color:rgba(244, 109, 6, 0.972) ;
+    cursor: pointer;
+  }
+  .mob-login-container{
+    display: none;
+  }
+  @media(max-width:790px){
+    .login-container{
+      display: none;
+    }
+    .mob-login-container{
+      display: block;
+      background-color: rgba(244, 109, 6, 0.972);
+      border-radius: 20px;
+      padding: 3%;
+      width: 50%;
+    }
+    h2{
+      font-size: 35px;
+    }
+    label{
+      font-size: 25px;
+    }
+  }
+ 

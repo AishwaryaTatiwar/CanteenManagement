@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import Navigation from './Components/Navigation.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>CanteenManagementSystem</h1>
+      {/* <h1>CanteenManagementSystem</h1> */}
+      <Navigation></Navigation>
     </div>
   );
 }
