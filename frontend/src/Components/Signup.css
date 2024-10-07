@@ -1,28 +1,20 @@
-.login-page {
+.signup-page {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-    /* background-image: url('C:\Users\Dell\Downloads\Miniproject\frontend\frontend\src\Components\Images\food.avif'); */
-    /* background-image: url(./Images/food.avif);
-======= */
-background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1727740800&semt=ais_hybrid');
-    
-
+    background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1727740800&semt=ais_hybrid');
     background-size: cover;
     background-position: center;
   }
-  
-  /* Login container style */
-  .login-container {
+  .signup-container {
     background-color:rgba(244, 109, 6, 0.972);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 350px;
+    width: 390px;
     margin-left: 500px;
-    height:350px
+    height:390px
   }
   
   /* Input fields style */
@@ -54,47 +46,27 @@ background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-wi
     color: rgba(244, 109, 6, 0.972);
     cursor: pointer;
   }
-  .signup{
-    display: flex;
-  }
-  .signup-btn{
-    height:40%;
-    margin-top: 38%;
-    margin-left: 10%;
-    background-color: #fff;
-    border-color: blanchedalmond;
-    border-radius: 20px;
-    width:97%;
-  }
-  .signup-btn:hover{
-    color:rgba(244, 109, 6, 0.972) ;
-    cursor: pointer;
-  }
-  .mob-login-container{
+ 
+  .mob-signup-container{
     display: none;
   }
   @media(max-width:790px){
-    .login-container{
+    .signup-container{
       display: none;
     }
-    .mob-login-container{
+    .mob-signup-container{
       display: block;
       background-color: rgba(244, 109, 6, 0.972);
       border-radius: 20px;
       padding: 3%;
-      width: 70%;
-      height: 50%;
-      padding-bottom: 10%;
+      width: 80%;
+      height: 70%;
     }
     h2{
-      font-size: 35px;
-    }
-    label{
       font-size: 25px;
     }
-    .mob-signup{
-      display: flex;
-      position: absolute;
+    label{
+      font-size: 12px;
     }
   }
  

@@ -1,0 +1,40 @@
+
+.last {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.last:hover {
+  transform: translateY(-5px);
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.order-now-button {
+  padding: 10px 20px;
+  background-color: #ffcc33;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-now-button:hover {
+  background-color: #ff6f61;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.order-now-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}

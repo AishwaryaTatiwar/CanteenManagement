@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Landing from './Landing.js';
 import Login from './login.js';
+import Signup from'./Signup.js';
+import Menu from './Menu.js';
+import CartPage from './CartPage.js';
 const Navigation = () => {
   return (
     <Router>
@@ -11,10 +14,12 @@ const Navigation = () => {
       <Routes>
         {/* Define your routes here */}
         <Route path="/login" element={<Login></Login>} />
-        <Route path="/menu" element={<div>Menu Page</div>} />
+        <Route path="/menu" element={<Menu></Menu>} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/delivery" element={<div>Delivery Page</div>} />
         <Route path="/profile" element={<div>Profile Page</div>} />
         <Route path="/" element={<Landing></Landing>} />
+        <Route path='/Signup' element={<Signup></Signup>}></Route>
       </Routes>
     </Router>
   );
