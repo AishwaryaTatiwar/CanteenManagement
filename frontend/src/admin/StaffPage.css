@@ -1,0 +1,63 @@
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  padding: 20px;
+  height: 100vh; 
+  width: 90%;
+}
+
+.staff-list {
+  flex-grow: 1; 
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+table {
+  width: 100%; 
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 10px;
+  background-color: #ffa500;
+  color: white;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.update-button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.update-button:hover {
+  background-color: #ff8000;
+}
+.add-staff-container{
+  position: absolute;
+  right:20px;
+}
+.add-staff-button{
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  width: fit-content;
+}

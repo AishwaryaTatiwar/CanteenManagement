@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Landing from './Landing.js';
 import Login from './login.js';
+import Signup from'./Signup.js';
 const Navigation = () => {
   return (
     <Router>
@@ -15,6 +16,7 @@ const Navigation = () => {
         <Route path="/delivery" element={<div>Delivery Page</div>} />
         <Route path="/profile" element={<div>Profile Page</div>} />
         <Route path="/" element={<Landing></Landing>} />
+        <Route path='/Signup' element={<Signup></Signup>}></Route>
       </Routes>
     </Router>
   );

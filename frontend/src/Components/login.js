@@ -1,6 +1,8 @@
 import React from 'react';
+import {Link, Route,Routes} from 'react-router-dom';
 import './comp.css';
 import './login.css';
+
 
 export default function login() {
   return (
@@ -19,7 +21,10 @@ export default function login() {
           <button className='btn'>Login</button>
         </form>
         <div className='signup'>
-        <h3>Don't have an account?</h3><button className='signup-btn'>Signup</button>
+        <h3>Don't have an account?</h3>
+        <Link to="/Signup">
+        <button className='signup-btn'>Signup</button>
+        </Link>
         </div>
       </div>
       {/* mobile view */}
@@ -36,8 +41,11 @@ export default function login() {
           </div>
           <button className='btn'>Login</button>
         </form>
-        <div className='signup'>
-        <h3>Don't have an account?</h3><button className='signup-btn'>Signup</button>
+        <div className='mob-signup'>
+        <h3>Don't have an account?</h3>
+        <Link to="/Signup">
+        <button className='signup-btn'>Signup</button>
+        </Link>
         </div>
       </div>
     </div>
