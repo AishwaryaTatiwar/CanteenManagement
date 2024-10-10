@@ -5,7 +5,7 @@ import MenuComponent from './MenuComponent';
 import Cart from './Cart';
 import TodaySpeciality from './TodaySpeciality';
 import Carousel from './Carousel';
-//  import './Menu.css';
+ import './Menu.css';
 
 function Menu() {
   const [searchQuery, setSearchQuery] = useState('');

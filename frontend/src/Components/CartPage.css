@@ -10,9 +10,20 @@
   .cart-page h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
+    color: #fff;
+    padding-left: 25px;
   }
-  
+  .cart-heading{
+    display: flex;
+    background-color: orange;
+    border-radius: 15px;
+  }
+  .cart-icon1{
+    height: 35px;
+    width:35px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
   .cart-items-container {
     flex-grow: 1;
     overflow-y: auto; 

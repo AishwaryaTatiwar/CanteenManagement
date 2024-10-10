@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import CartDisplay from './CartDisplay';  
+import { BsFillCartFill } from 'react-icons/bs'
 import './CartPage.css';
 
 const CartPage = () => {
@@ -30,7 +31,9 @@ const CartPage = () => {
 
   return (
     <div className="cart-page">
-      <h2>Your Cart</h2>
+      <div className='cart-heading'> 
+      <BsFillCartFill className="cart-icon1" />
+      <h2>Your Food Cart</h2></div>
       <div className="cart-items-container">
         {cartItems.length > 0 ? (
           cartItems.map((item, index) => (
