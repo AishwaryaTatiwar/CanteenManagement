@@ -16,15 +16,32 @@ dotenv.config();
 
 const app = express();
 
+// CORS options
+const corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 // Middleware
 app.use(express.json()); //works as a translator .json(raw data from user) to .js(organised data to makes understand server)
-app.use(cors());
+
+// app.use(cors());
 
 // MongoDB connection
+// mongoose
+//   .connect(
+//     "mongodb+srv://priyachaurasiya730:hiq9MXRobDPiKbiM@cluster0.e0opx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+
+//     { useNewUrlParser: true, useUnifiedTopology: true }
+//   )
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.error(err));
+
 mongoose
   .connect(
-    "mongodb+srv://priyachaurasiya730:hiq9MXRobDPiKbiM@cluster0.e0opx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    "mongodb+srv://priyachaurasiya730:hiq9MXRobDPiKbiM@cluster0.e0opx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error(err));
@@ -32,6 +49,7 @@ mongoose
 // Routes
 app.use("/api/auth", authRoutes);
 
+// /api/auth/register
 app.get("/", (req, res) => {
   res.send("hello world! Response from server");
 });
@@ -74,7 +92,7 @@ app.post("/payment", (req, res) => {
 
 // Start server
 //listen
-const PORT = process.env.PORT || 8282;
+const PORT = process.env.PORT || 8283;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

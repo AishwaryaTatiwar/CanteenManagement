@@ -7,7 +7,7 @@ const UserModel = require("../models/userModel");
 
 // Registration Route User Register with  email, password, mobile
 userRouter.post("/register", async (req, res) => {
-  const { email, password, mobile } = req.body;
+  const { email, password, name } = req.body;
   try {
     // find email is that user want to register if this already exists then response will be Email already exists
     const isEmail = await UserModel.find({ email: email });
@@ -19,7 +19,7 @@ userRouter.post("/register", async (req, res) => {
         const payload = {
           email,
           password: hash,
-          mobile,
+          name,
         };
         // now in payload password will be hased
         const user = new UserModel(payload);
