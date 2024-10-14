@@ -3,7 +3,13 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1727740800&semt=ais_hybrid');
+background: url('./Images/food.avif');
+    /* background-image: url('C:\Users\Dell\Downloads\Miniproject\frontend\frontend\src\Components\Images\food.avif'); */
+    /* background-image: url(./Images/food.avif);
+======= */
+/* background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1727740800&semt=ais_hybrid'); */
+    
+
     background-size: cover;
     background-position: center;
   }
