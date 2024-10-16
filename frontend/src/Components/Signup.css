@@ -3,17 +3,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://img.freepik.com/free-photo/top-view-food-frame-with-copy-space_23-2148723447.jpg?size=626&ext=jpg&ga=GA1.1.1819120589.1727740800&semt=ais_hybrid');
+    background-image: url('./Images/bg2.jpg');
     background-size: cover;
     background-position: center;
   }
   .signup-container {
-    background-color:rgba(244, 109, 6, 0.972);
+    background-color:orange;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 390px;
-    margin-left: 500px;
+    margin-right: 500px;
     height:390px
   }
   

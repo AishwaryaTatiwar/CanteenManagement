@@ -1,7 +1,11 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './Receipt.css';
 
 const Receipt = () => {
+  const location = useLocation();
+  const { cartItems, totalPrice } = location.state || { cartItems: [], totalPrice: 0 }; // default values in case no state is passed
+
   return (
     <div className="receipt-container">
       <div className="receipt-box">
@@ -36,22 +40,24 @@ const Receipt = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Chola Bhatura</td>
-                <td>1</td>
-                <td>50</td>
-                <td>50</td>
-              </tr>
+              {cartItems.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.title}</td>
+                  <td>{item.quantity}</td>
+                  <td>{item.price}</td>
+                  <td>{item.price * item.quantity}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
-          <p className="total-price"><strong>Total Price:</strong> Rs.50</p>
+          <p className="total-price"><strong>Total Price:</strong> Rs. {totalPrice}</p>
         </div>
 
         {/* Footer */}
         <div className="receipt-footer">
           <p>Thank you for your order! We hope you enjoy your meal.</p>
-          <button className="feedback-button">Give Feedback</button>
-          <button className="feedback-button">Download Receipt</button>
+          <button className="cancel-button">Cancel Order</button>
+          <button className="download-button">Download Receipt</button>
         </div>
       </div>
     </div>

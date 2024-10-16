@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
   }
-  
+  /*Navbar css*/
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@ body {
   
   .site-name a {
     text-decoration: none;
-    color: rgba(244, 109, 6, 0.972);
+    color: orange;
     font-size: 28px;
     font-weight: bold;
     font-style: italic;
@@ -32,7 +32,7 @@ body {
   }
   
   .nav-links a:hover {
-    color: rgba(244, 109, 6, 0.972);
+    color: orange;
   }
   
   .nav-toggle {
@@ -41,331 +41,126 @@ body {
     font-size: 30px;
   }
   
-  /* Sidebar styles */
-  .sidebar {
-    /* display: none; */
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: rgba(244, 109, 6, 0.972);
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-  }
-  
-  .sidebar.open {
-    width: 250px;
-  }
-  
-  @media (max-width: 540px) {
-    .nav-links {
-      display: none; /* Hide main links in mobile view */
-    }
-  
-    .nav-toggle {
-      display: flex; /* Show hamburger menu */
-      align-self: flex-end;
-    }
-  }
+/* banner */
+.banner{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:url(./Images/bg.jpg);
+  background-size: cover;
+}
+.banner .content{
+  max-width: 80%;
+  text-align: center;
+}
+.banner .content h2{
+  font-size: 3em;
+  color: #fff;
+}
+.banner .content p{
+  font-size: 0.9em;
+  color: #fff;
+}
+.content button{
+  font-size: 1em;
+  color: black;
+  background-color: orange;
+  display: inline-block;
+  padding: 10px 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  width: 200px;
+  border-radius: 20px;
+}
+.content button:hover{
+  letter-spacing: 4px;
+}
+/* Typing Effect */
+.typing-effect {
+  white-space: nowrap;/*For not allowing text on next line*/
+  overflow: hidden;
+  border-right: 3px solid; /* Cursor effect */
+  width: 0; /* Initial width to animate */
+  animation: typing 3.5s steps(40, end) forwards, blink 0.75s step-end 3.5s;
+}
+.mob-typing-effect{
+  display: none;
+}
 
-  .land-style {
-    background-color: rgba(244, 109, 6, 0.972);
-    height: 650px;
-    width: 500px;
-    margin-left: 20px;
+/* Typing animation */
+@keyframes typing {
+  from {
+      width: 0;
   }
-  .mob-land-sty{
-    display: none;
+  to {
+      width: 100%; /* Full width */
   }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
-    padding-left: 40px;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  from, to {
+      border-color: transparent;
   }
-  
-  .circle-img {
-    margin-top: 50px;
-    z-index: 1;
-    height: 200px;
-    /* margin-left: 20%; */
-    margin-right: -40%;
+  50% {
+      border-color: white;
   }
-  
-  .circle-img img {
-    border-radius: 460px;
-    height: 30rem;
-    width: 30rem;
-    z-index: -1;
+}
+
+/* aboutus */
+.row{
+  height: 100%;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  text-align: start;
+  margin-bottom: 30px;
+}
+.row.col{
+  width:25%;
+}
+
+.about{
+  padding: 100px;
+}
+.row{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.row .col50{
+  position: relative;
+  width: 48%;
+}
+.aboutus-text{
+text-align: justify;
+}
+.row .col50 .imgBx img{
+  height: auto;
+  background: cover;
+}
+.titleText{
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+.titleText span{
+  color: orange;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+/* top sellers and top-reviews */
+  .top-sellers{
+    margin-left: 500px;
   }
-  
-  .container span {
-    color: rgba(244, 109, 6, 0.972);
-  }
-  
-  .container h1 {
-    margin-top: 210px;
-    font-size: 50px;
-  }
-  
-  .container1 button {
-    border: none;
-    background-color: rgba(244, 109, 6, 0.972);
-    border-radius: 20px;
-    height: 40px;
-    width: 120px;
-    font-size: 15px;
-    cursor:pointer;
-  }
-  
-  .container1 h2 {
-    color: rgb(72, 71, 71);
-  }
-  
-  .img1 {
-    height: 40px;
-    float: left;
-  }
-  
-  .img1 img {
-    height: 140px;
-  }
-  @media(max-width:1024px){
-    .container {
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 0;
-    }
-    .container1{
-      padding-left: 5%;
-      margin-top: 10%;
-      align-self: flex-start;
-      /* margin-right: 15%; */
-      width: 45%;
-      height: 25%;
-    }
-    .land-style{
-      display: none;
-    }
-    .circle-img {
-      display: flex;
-      flex-direction: row-reverse;
-      margin: 20px 0 ;
-      z-index: -1;
-    }
-    .circle-img img{
-      z-index:1;
-      margin-right: -15%;
-      height: 28rem;
-      width: 28rem;
-    }
-    .mob-land-sty{
-      display: block;
-      background-color:rgba(244, 109, 6, 0.972);
-      height: 50rem;
-      width: 20rem;
-    }
-  }
-  @media (max-width: 540px) {
-    .container {
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 0;
-    }
-    .container1{
-      padding-left: 5%;
-      margin-top: 55%;
-      align-self: flex-start;
-      /* margin-right: 15%; */
-      width: 35%;
-      height: 15%;
-    }
-    #welcome{
-      font-size: 200%;
-    }
-    #smart-canteen{
-      font-size: 90%;
-    }
-  
-    .circle-img {
-      display: flex;
-      flex-direction: row-reverse;
-      margin: 20px 0 ;
-      z-index: -1;
-    }
-    .circle-img img{
-      height: 20rem;
-      width: 20rem;
-      z-index: -1;
-      margin-right: -135px;
-      margin-top: 10%;
-    }
-  
-    .container h1 {
-      font-size: 36px;
-      margin-top: 20px;
-    }
-  
-    .container h2 {
-      font-size: 16px;
-      text-align: center;
-    }
-  
-    .container1 button {
-      margin-top: 20px;
-      width: 100%;
-      height: 50px;
-    }
-    .land-style{
-      display: none;
-    }
-    .mob-land-sty{
-      display: block;
-      background-color:rgba(244, 109, 6, 0.972);
-      height: 50rem;
-      width: 10rem;
-      z-index: -2;
-      align-items: flex-end;
-    }
-  }
-  
-  .container2{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 150px;
-    margin-bottom: 200px;
-  }
-  .left-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
-  }
-  .feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: -20px;
-  }
-  .icon {
-    font-size: 40px;
-    margin-right: 15px;
-    color: rgba(244, 109, 6, 0.972); /* Orange color for icons */
-  }
-  .abtus{
-    padding-right: 0;
-    flex-wrap: wrap;
-    margin-left: 15%;
-  }
-  .abtus p{
-    /* font-size: 20px; */
-    padding: 20px;
-    margin: 10px;
-    /* border-radius: 20px; */
-    /* width: 90px;
-    height: 50px; */
-    color: rgb(72, 71, 71);
-    font-weight: bold;
-    flex-wrap: wrap;
-  }
-  .abtus h1{
-    padding-left: 60px;
-    font-size: 40px;
-  }
-  .feature img{
-    height: 120px;
-    width:120px;
-  }
-  .feature p{
-    padding-left: 60px;
-    font-size: 20px;
-  }
-  #fork1{
-    width:200px;
-    height: 200px;
-  }
-  .mobile-heading{
-    display: none;
-  }
-  .mobile-heading1{
-    display: none;
-  }
-  @media(max-width:1024px){
-    .left-container{
-      display: none;
-    }
-    .abtus{
-      padding: 0%;
-    }
-    .abtus p{
-      /* font-size: 100%; */
-      padding-left: 30%;
-      text-align:justify;
-      height: 30px;
-      width:300px;
-      flex-wrap: wrap;
-    }
-    .abtus p span{
-      display: none;
-    }
-    .abtus h1{
-      padding-left: 60%;
-    }
-  }
-  @media (max-width: 540px) {
-    .container2 {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 50px;
-      margin-bottom: 50px;
-    }
-  
-    .left-container {
-      display: none; /* Hide left-container on mobile view */
-    }
-  
-    .abtus {
-      padding: 15%;
-      text-align: center; /* Center text for mobile */
-    }
-  
-    .abtus p {
-      width: auto; /* Take full width on mobile */
-      height: auto; /* Adjust height automatically */
-      font-size: 70%;
-      padding: 0;
-    }
-  
-    .abtus h1 {
-      padding-left: 0;
-      font-size: 36px;
-    }
-  }
-  
   .container3 {
     display: flex;
     overflow-x: scroll;  /* Allows horizontal scrolling */
@@ -374,7 +169,7 @@ body {
     gap: 20px;           /* Adds spacing between the items */
     scrollbar-width: none;  /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer and Edge */
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
   
   .images {
@@ -388,102 +183,214 @@ body {
     height: 220px;
     border-radius: 10px; /* Optional: adds rounded corners */
   }
-  .heading{
-    padding-left: 40%;
+  .images img:hover{
+    width:110%;
+    height: 250px;
   }
-  .heading1{
-    padding-left: 30%;
-  }
-  @media (max-width:540px){
-  
-    .heading{
-      display: none;
-    }
-    .heading1{
-      display: none;
-    }
-    .mobile-heading{
-      display: block;
-      padding-left: 35%;
-      font-size: 180%;
-      font-weight:bolder ;
-    }
-    .mobile-heading1{
-      display: block;
-      padding-left: 15%;
-      font-size: 180%;
-      font-weight:bolder ;
-    }
-  }
-  
-  /* Background image and full-screen style */
-  
-  .footer{
-    margin:0;
-    padding:0;
-    font-family: 'poppins';
-    font-size: 15px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    min-height: 50vh;
+
+/* contactUs section */
+.contact{
+    background: url(./Images/bg3.jpg);
+    background-size: cover;
+    padding-bottom: 55px;
+}
+.contactForm{
+    padding: 55px 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background:#fff;
+    box-shadow: 0 15px 50px rgb(0 0 0 / 30%);
+    max-width: 300px;
+    margin-left: 100px;
+}
+.contactForm h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.contactForm .inputBox{
     position: relative;
-    width:100%;
-    background-color: rgba(244, 109, 6, 0.972);
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 1em;
+    font-weight: 300;
+    resize: none;
+}
+.contactForm .inputBox input[type="submit"]{
+    font-size: 1em;
+    color: #fff;
+    background: orange;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.title{
+  margin-left: 500px;
+}
+
+/* copyright */
+.copyright{
+  padding: 20px 40px;
+  border-top: 1px solid orange;
+  text-align: center;
+}
+.copyright p{
+  color: #333;
+}
+
+/* -----------------------------mobile-view-css------------------------- */
+
+/* Sidebar styles mobile view*/
+.sidebar {
+  /* display: none; */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: orange;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+@media (max-width: 540px) {
+  .nav-links {
+    display: none; /* Hide main links in mobile view */
   }
-  .wave{
-    position: absolute;
-    top:-100px;
-    left:0;
-    width:100%;
-    height:120px;
-    background: url('./Images/svg.png');
-    /* background: url(C:\Users\Dell\Downloads\Miniproject\CanteenManagementfrontend\frontend\src\Components\Images\svg.png);
-    background-size: 1000px 100px; */
-    
+
+  .nav-toggle {
+    display: flex; /* Show hamburger menu */
+    align-self: flex-end;
   }
-  .wave:nth-of-type(1){
-    z-index:1000;
-    opacity: 1;
-    bottom: 0;
-    animation: anim 4s linear infinite;
-  }
-  .wave:nth-of-type(2){
-    z-index:999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: anim2 4s linear infinite !important;
-  }
-  .wave:nth-of-type(3){
-    z-index:1000;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: anim 4s linear infinite !important;
-  }
-  .wave:nth-of-type(4){
-    z-index:999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: anim 4s linear infinite !important;
-  }
-  @keyframes anim{
-    0%{
-      background-position-x: 1000px;
-    }
-    100%{
-      background-position-x: 0 0;
-    }
-  }
-  .row{
-    height: 100%;
-    width:100%;
-    display:flex;
-    justify-content: space-between;
-    text-align: start;
+}
+@media(max-width:991px){
+  section{
+    padding: 30px;
+}
+.banner .content h2{
+    font-size: 3em;
+    color: #fff;
+}
+.about{
+     padding:30px;
+}
+.row{
+    flex-direction: column;
+}
+.row .col50 {
+    position: relative;
+    width: 100%;
+}
+.row .col50 .imgBx{
+    margin-top: 20px;
+}
+.title{
     margin-bottom: 30px;
+    text-align: center;
+}
+.menu .content .box{
+    margin: 10px;
+}
+.titleText {
+    color: #111;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.testimon .content .box{
+    margin: 12px;
+    padding: 20px;
+}
+.testimon{
+  margin:0px;
+}
+.contactForm{
+    margin-left:0px;
+}
+.top-sellers{
+  margin-left: 0;
+}
+.title{
+  margin-left: 0;
+}
+.row .col50 .imgBx img{
+  width:100%;
+}
+.typing-effect {
+  display: none; /* Hide desktop typing effect on mobile */
+}
+.banner .content h2{
+  font-size: 2em;
+  color: #fff;
+}
+.mob-typing-effect {
+  display: inline-block; /* Show mobile typing effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  border-right: 3px solid; /* Cursor effect */
+  width: auto; /* Use auto width for dynamic text length */
+  max-width: 100%; /* Ensure it does not exceed screen width */
+  animation: typing-mobile 3.5s steps(30, end) forwards, blink-mobile 0.75s step-end infinite;
+}
+
+@keyframes typing-mobile {
+  from {
+    width: 0;
   }
-  .row.col{
-    width:25%;
+  to {
+    width: 100%; /* Dynamically adjust based on text size */
   }
-  
-  
+}
+
+@keyframes blink-mobile {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+}

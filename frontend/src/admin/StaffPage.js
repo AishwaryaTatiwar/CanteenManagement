@@ -6,7 +6,6 @@ function StaffPage() {
   return (
       <div className="main-content">
         <div className="add-staff-container">
-        <button className="add-staff-button">➕Add Staff</button>
         </div>
         {/* Table for staff list */}
         <div className="staff-list">

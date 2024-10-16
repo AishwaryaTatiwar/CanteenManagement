@@ -75,7 +75,7 @@
     font-size: 15px;
     color: #ddd;
   }
-  .feedback-button {
+  .cancel-button {
     background-color: white;
     color: black;
     height:30px;
@@ -87,8 +87,25 @@
     font-weight: bold;
     transition: background-color 0.3s ease;
   }
-  
-  .feedback-button:hover {
-    background-color: #e68a00;
+  .cancel-button:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .download-button {
+    background-color: white;
+    color: black;
+    height:30px;
+    width:140px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .download-button:hover {
+    background-color: orange;
+    color: white;
   }
   

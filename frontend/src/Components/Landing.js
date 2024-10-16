@@ -1,9 +1,6 @@
 import React from 'react'
 import circleimg from './Images/circleimg.jpg'
 import './comp.css';
-import food from './Images/food.webp';
-import fork from './Images/fork-spoon.webp';
-import delivery from './Images/delivery.jpg';
 import { Link } from 'react-router-dom';
 import chola_bhatura from './Images/chola_bhatura.webp';
 import idli_sambhar from './Images/idli_sambhar.jpg';
@@ -15,58 +12,48 @@ import sambhar_samosa from './Images/sambhar_samosa.jpg';
 import review1 from './Images/review1.jpeg';
 import review2 from './Images/review2.avif';
 import review3 from './Images/review3.webp';
+import img1 from './Images/img1.png';
+import testi1 from './Images/testi1.jpg';
+import testi2 from './Images/testi2.jpg';
+import testi3 from './Images/testi3.jpg';
 
 export default function Landing() {
   return (
     <div className='body'>
-           {/* home */}
-          <div className='container'>
-            <div className='container1'>
-            <h1 id='welcome'>Welcome to your <br></br><span>Smart Canteen</span></h1>
-            <h2 id='smart-canteen'>Where technology meets taste!<br></br> Enjoy a seamless, personalized dining <br></br>experience designed just for you.</h2>
-            <Link to="/login">
-            <button>Get Started</button>
-            </Link>
-            </div>
-            <div className='circle-img'>
-            <div className='mob-land-sty'></div>
-            <img src={circleimg}></img>
-            </div>
-            <div className='land-style'></div>
-          </div>
-          
-          {/* aboutus */}
-          <div className='container2'>
-
-          <div className='left-container'>
-          <div className="feature">
-          <div className="icon"><img src={food}></img></div>
-          <p>Cafeteria at your fingertips</p>
-          </div>
-          <div className="feature">
-          <p>Order dishes online</p>
-          <div className="icon" ><img src={fork} id="fork1"></img></div>
-          </div>
-          <div className="feature">
-          <div className="icon"><img src={delivery}></img></div>
-          <p>Fastest order prepared with smart delivery</p>
-          </div>
-          </div>
-
-          <div className='abtus'>
-          <h1>AboutUs</h1>
-          <p>Our Smart Canteen Management System brings efficiency,<br></br> convenience, and simplicity to your dining experience—whether <br></br>it’s a school cafeteria, a corporate food court, or a bustling <br></br>institutional canteen.
+      {/* home */}
+      <section className="banner" id="banner">
+        <div className="content">
+            <h2 className='typing-effect'>Welcome to your Smart Canteen</h2>
+            <h2 className='mob-typing-effect'>Smart Canteen</h2>
+            <p>Where technology meets taste!Enjoy a seamless, personalized dining experience designed just for you.</p>
+            <Link to="/login"><button>Get Started</button></Link>
+        </div>
+      </section>
+        
+        {/* aboutus */}
+        <section className="about" id="about"> 
+        <div className="row">
+            <div className="col50">
+              <h2 class="titleText"><span>A</span>bout Us</h2>
+            <div className='aboutus-text'>
+              <p>Our Smart Canteen Management System brings efficiency, convenience, and simplicity to your dining experience—whether it’s a school cafeteria, a corporate food court, or a bustling institutional canteen.
           <span>
           We believe mealtime should be easy and enjoyable.That’s why we’ve designed a system that streamlines everything—from browsing menus and placing orders to tracking inventory and processing payments. No more long lines, manual orders, or stock issues. Just smooth, efficient, and smart management at your fingertips.
           <br></br>
-          </span>
-          </p>
+          </span></p>
           </div>
+          
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src={img1}></img>
+                </div>
+            </div>
         </div>
+    </section>
 
         {/* top sellers */}
-        <h1 className='heading'>Top Sellers</h1>
-        <div className='mobile-heading'>Top Sellers</div>
+        <div className='top-sellers'><h2 class="titleText"><span>T</span>op Sellers</h2></div>
         <div className='container3 scrollable'>
           <div className='images'>
             <img src={chola_bhatura}></img>
@@ -99,64 +86,61 @@ export default function Landing() {
         </div>
         
         {/* top-reviews and volunteers */}
-        <h1 className='heading1'>Top Reviews and Volunteers</h1>
-        <h1 className='mobile-heading1'>Top Reviews and Volunteers</h1>
+        <div className='top-sellers'><h2 class="titleText"><span>T</span>op Reviews</h2></div>
         <div className='container3 scrollable'>
           <div className='images'>
-            <img src={review1}></img>
-            <p>Chola Bhatura was nice</p>
+            <img src={testi1}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review2}></img>
-            <p>Idli-Sambhar was great</p>
+            <img src={testi2}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review3}></img>
-            <p>Samosa was perfect</p>
+            <img src={testi3}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review1}></img>
-            <p>Lassi was refreshing</p>
+            <img src={testi1}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review2}></img>
-            <p>Chhach was good</p>
+            <img src={testi2}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review3}></img>
-            <p>Dahi Samosa is my favourite</p>
+            <img src={testi3}></img>
+            <p>Lorem ipsum</p>
           </div>
           <div className='images'>
-            <img src={review1}></img>
-            <p>Sambhar Samosa was spicy</p>
+            <img src={testi1}></img>
+            <p>Lorem ipsum</p>
           </div>
         </div>
-        <footer>
-          <div className='footer'>
-            <div className='waves'>
-              <div className='wave' id='wave'></div>
-              <div className='wave' id='wave'></div>
-              <div className='wave' id='wave'></div>
-              <div className='wave' id='wave'></div>
-            </div>
-            <div className='row'>
-              <div className='col'>
-                
-              </div>
-              <div className='col'>
 
-              </div>
-
-              <div className='col'>
-                
-              </div>
-              <div className='col'>
-                
-              </div>
+        <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Us</h2>
+        </div>
+        <div class="contactForm">
+            <h3>Send Message</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name"></input>
             </div>
-            <p>&copy; 2024||All rights Received By Quadcore</p>
-          </div>
-        </footer>
+            <div class="inputBox">
+                <input type="text" placeholder="Email"></input>
+            </div>
+            <div class="inputBox">
+                <textarea  placeholder="Message"></textarea>
+            </div>
+            <div class="inputBox">
+                <input  type="submit" value="Send"></input>
+            </div>
+        </div>
+    </section>
+    <div class="copyright">
+        <p>Made with ❤️ by Aishwarya,Priya,Raj,Aryan</p>
+    </div>
     </div>
   )
 }
