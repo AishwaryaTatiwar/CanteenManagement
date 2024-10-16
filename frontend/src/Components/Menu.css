@@ -1,11 +1,17 @@
 
 .last {
   display: flex;
+  align-items: center;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+  transition: transform 0.3s ease;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
 }
 
 .last:hover {
@@ -37,4 +43,13 @@
 .order-now-button:focus {
   outline: none;
   box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}
+.top p{
+  font-size: 15px;
+}
+.top input{
+  width:170px;
+}
+.menu-container{
+  margin-bottom: 80px;
 }

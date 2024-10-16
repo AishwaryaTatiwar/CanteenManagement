@@ -62,6 +62,7 @@
     padding: 15px;
     border-radius: 10px;
     max-width: 100%;
+    max-height: 100%;
     margin: 20px auto;
     color: white;
     height: auto;
@@ -81,7 +82,10 @@
   .special-text p {
     font-size: 12px;
   }
-  
+  #title-price{
+   font-weight: bold;
+   font-size: 12px;
+  }
   .special-image {
     display: flex;
     flex-direction: column;
@@ -89,14 +93,14 @@
   }
   
   .special-image img {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
   }
   
   .image-caption {
     margin-top: 8px;
-    background-color: white;
+    /* background-color: white; */
     padding: 8px;
     width: 110px;
     height: auto;

@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(244, 109, 6, 0.972);
+    background-color: orange;
   }
   
   .search-bar {
@@ -17,6 +17,9 @@
     cursor: pointer;
     margin-right: 20px;
   }
+  .toggle span{
+    color: white;
+  }
   .sidebar1{
     position: fixed;
     display: none;
@@ -24,7 +27,7 @@
     left: -250px; /* Initially hidden off-screen */
     width: 200px;
     height: 100%;
-    background-color: rgba(244, 109, 6, 0.972);
+    background-color: orange;
     color: white;
     padding: 20px;
     transition: all 0.3s ease-in-out; /* Smooth transition */
@@ -49,7 +52,7 @@
     border-bottom: 1px solid #555;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: white;
   }
   .close-btn1 {
     font-size: 30px;

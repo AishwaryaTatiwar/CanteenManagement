@@ -16,5 +16,4 @@ function Cart({ cartCount }) {
     </div>
   );
 }
-
 export default Cart;

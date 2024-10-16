@@ -6,14 +6,11 @@ function TodaySpeciality({ title, price, description, imgUrl }) {
     <div className="special-card">
       <div className="special-text">
         <h1>Today's special!</h1>
+        <p id='title-price'>{title} ₹{price}</p>
         <p>{description}</p>
       </div>
       <div className="special-image">
         <img src={imgUrl} alt={title} />
-        <div className="image-caption">
-          <p>{title}</p>
-          <p>₹ {price}</p>
-        </div>
       </div>
     </div>
   );

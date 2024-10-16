@@ -49,15 +49,4 @@ tbody td {
 .update-button:hover {
   background-color: #ff8000;
 }
-.add-staff-container{
-  position: absolute;
-  right:20px;
-}
-.add-staff-button{
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid black;
-  cursor: pointer;
-  height: 40px;
-  width: fit-content;
-}
+

@@ -15,12 +15,12 @@ const CartDisplay = ({ Img, foodName, price, quantity, onQuantityChange }) => {
       <img src={Img} alt={foodName} className="cart-food-img" />
       <div className="food-details">
         <h3>{foodName}</h3>
-        <p>Price: Rs. {price}</p>
         <div className="quantity-controls">
           <button className="quantity-btn" onClick={handleDecrease}>-</button>
           <span>{quantity}</span>
           <button className="quantity-btn" onClick={handleIncrease}>+</button>
         </div>
+        <p>Price: Rs. {price}</p>
         <p>Subtotal: Rs. {price * quantity}</p>
       </div>
     </div>
