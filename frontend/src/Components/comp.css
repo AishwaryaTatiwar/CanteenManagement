@@ -15,7 +15,7 @@ body {
   .site-name a {
     text-decoration: none;
     color: orange;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     font-style: italic;
   }
@@ -25,6 +25,15 @@ body {
     gap: 20px;
   }
   
+  .nav-links button{
+    background-color: orange;
+    border-radius: 10px;
+  }
+
+  .nav-links button:hover{
+    background-color:white;
+  }
+
   .nav-links a {
     text-decoration: none;
     color: black;

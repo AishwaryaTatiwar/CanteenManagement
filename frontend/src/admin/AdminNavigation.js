@@ -60,6 +60,7 @@ function AdminNavigation() {
         <Route path="/menu" element={<MenuPage></MenuPage>} />
         <Route path="/users" element={<UsersPage></UsersPage>} />
         <Route path="/staff" element={<StaffPage></StaffPage>} />
+        <Route path="/userquery" element={<div>User queries</div>} />
       </Routes>
     </Router>
   );
