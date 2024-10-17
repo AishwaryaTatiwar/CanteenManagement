@@ -25,6 +25,7 @@ export default function Login() {
         "http://localhost:8283/api/auth/login",
         formData // Send the formData directly
       );
+      localStorage.setItem('token', response.data.token);
       console.log(response.data.message);
       alert(response.data.message); // Optional: Show success message
       navigate("/"); // Redirect to homepage on successful login

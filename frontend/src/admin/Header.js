@@ -29,6 +29,7 @@ function Header() {
         <Link to="/menu" className='links'>Menu</Link>
         <Link to="/users" className='links'>Users</Link>
         <Link to="/staff" className='links'>Staff</Link>
+        <Link to="/userquery" className='links'>User Queries</Link>
         </div>
       </div>
 

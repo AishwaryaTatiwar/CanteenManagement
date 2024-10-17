@@ -53,6 +53,17 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("hello world! Response from server");
 });
+app.get('/api/user', async (req, res) => {
+  try {
+      const user = await User.findOne(); // Fetch the first user
+      if (!user) {
+          return res.status(404).json({ message: 'User not found' });
+      }
+      res.json(user); // Send user data as response
+  } catch (err) {
+      res.status(500).json({ message: 'Server error' });
+  }
+});
 
 //Payment Routing
 app.post("/payment", (req, res) => {

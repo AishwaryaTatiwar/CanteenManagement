@@ -52,13 +52,18 @@ const OrderDetails = ({ order }) => {
 
                   <div className="value">{order.date}</div>
                   <div className="value">{order.customer}</div>
-                  <button className="items-btn" onClick={togglePopup}>Items,quantity,amt</button>
+                  <button className="items-btn" onClick={togglePopup}>Items, quantity, amt</button>
                   <div className="value">Rs.{order.totalAmount}</div>
                 </div>
                   
                 <div className="order-actions">
-                  <button className="accept-btn">Accept</button>
-                  <button className="reject-btn">Reject</button>
+                  {/* Conditionally render buttons based on order status */}
+                  {activeTab === 'pending' && (
+                    <>
+                      <button className="accept-btn">Accept</button>
+                      <button className="reject-btn">Reject</button>
+                    </>
+                  )}
                 </div>
               </div>
 
