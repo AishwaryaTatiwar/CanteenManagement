@@ -5,7 +5,10 @@ import './StaffPage.css';
 function StaffPage() {
   return (
       <div className="main-content">
-        <div className="add-staff-container">
+        <div className="headerStaff">
+          <button className="add-staff-button">
+            +Add staff
+          </button>
         </div>
         {/* Table for staff list */}
         <div className="staff-list">

@@ -7,6 +7,29 @@
   height: 100vh; 
   width: 90%;
 }
+.headerStaff{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* background-color: #ffa500; */
+  background-color: #ffffff;
+  color:  #ffa500;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.add-staff-button{
+  margin-right: 70px;
+  background-color: white;
+  color: #ffa500;
+  border: 1px solid #ffa500;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  max-width: 190px;
+  max-height: 70px;
+}
 
 .staff-list {
   flex-grow: 1; 
