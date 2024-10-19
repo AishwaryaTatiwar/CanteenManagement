@@ -1,10 +1,73 @@
-import React from 'react';
+import React ,{useEffect,useState} from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from "axios";
 import './Receipt.css';
 
 const Receipt = () => {
   const location = useLocation();
   const { cartItems, totalPrice } = location.state || { cartItems: [], totalPrice: 0 }; // default values in case no state is passed
+  const [userName, setUserName] = useState(''); // State for storing the user's name
+    const [userEmail, setUserEmail] = useState(''); // State for storing the user's name
+
+    const [error, setError] = useState(null); // State for handling errors
+
+    // Function to decode JWT token
+    const decodeJwt = (token) => {
+        if (!token) return null;
+        const payload = token.split('.')[1];
+        return JSON.parse(atob(payload));
+    };
+
+    // Get the token from localStorage and decode it to extract userId
+    const token = localStorage.getItem('token');
+    const userId = decodeJwt(token)?.userID;
+
+
+    // Function to fetch user name from the server
+    const fetchUserName = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8283/api/user/${userId}`, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`, // Include your token in the request
+                },
+            });
+
+            const data = response.data;
+            if (data.success) {
+                setUserName(data.data.name); // Set the user's name in the state
+            } else {
+                setError(data.message); // Handle error message
+            }
+        } catch (error) {
+            console.error('Error fetching user name:', error);
+            setError('Failed to fetch user name');
+        }
+    };
+    const fetchUserEmail = async () => {
+        try {
+            const response = await axios.get(`http://localhost:8283/api/user/${userId}`, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`, // Include your token in the request
+                },
+            });
+
+            const data = response.data;
+            if (data.success) {
+                setUserEmail(data.data.email); // Set the user's name in the state
+            } else {
+                setError(data.message); // Handle error message
+            }
+        } catch (error) {
+            console.error('Error fetching user name:', error);
+            setError('Failed to fetch user name');
+        }
+    };
+
+    // Fetch user name on component mount
+    useEffect(() => {
+        fetchUserName();
+        fetchUserEmail();
+    }, [userId]);
 
   return (
     <div className="receipt-container">
@@ -20,7 +83,8 @@ const Receipt = () => {
         {/* Customer Details */}
         <div className="section">
           <h3>Customer Details</h3>
-          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Name:</strong> {userName}</p>
+          <p><strong>Email:</strong> {userEmail}</p>
           <p><strong>Payment method:</strong> UPI</p>
           <p><strong>Transaction ID:</strong> #CAN12345678</p>
           <p><strong>Transaction Status:</strong> Successful</p>

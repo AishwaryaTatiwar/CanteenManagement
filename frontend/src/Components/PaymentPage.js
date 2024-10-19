@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import "./PaymentPage.css";
 import QR from "./Images/QRCode.png";
 import receipt from "./Receipt";
+
 const PaymentPage = () => {
+  const location = useLocation();
+  const { cartItems, totalPrice } = location.state || { cartItems: [], totalPrice: 0 };
   const stripe = useStripe();
   const elements = useElements();
   const navigate = useNavigate(); // Initialize useNavigate
@@ -15,6 +19,9 @@ const PaymentPage = () => {
     price: 10,
     productBy: "Anna",
   });
+  const handlePaynow= () => {
+    navigate('/Receipt', { state: { cartItems,totalPrice } });
+  };
 
   // Handle payment method selection
   const handlePaymentMethodChange = (method) => {
@@ -84,6 +91,7 @@ const PaymentPage = () => {
 
   return (
     <div className="payment-page">
+      <div>Total price:{totalPrice}</div>
       <h2>Choose Your Payment Method</h2>
 
       <div className="payment-options">
@@ -167,7 +175,7 @@ const PaymentPage = () => {
           </div>
         )}
 
-        <button type="submit" className="submit-button">
+        <button type="submit" className="submit-button" onClick={handlePaynow}>
           {paymentMethod === "card" ? "Pay with Card" : "Pay Now"}
         </button>
       </form>

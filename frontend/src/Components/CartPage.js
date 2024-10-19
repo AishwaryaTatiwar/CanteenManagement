@@ -30,8 +30,9 @@ const CartPage = () => {
     setCartItems(updatedItems);
   };
   const navigate = useNavigate();
-  const handlePaynow= () => {
-    navigate('/Receipt', { state: { cartItems,totalPrice } });
+  
+  const handlePayment= () => {
+    navigate('/paymentpage',{ state: { cartItems,totalPrice } });
   };
 
   return (
@@ -58,14 +59,7 @@ const CartPage = () => {
       </div>
       <div className="total-section">
         <h3>Total Price: Rs. {totalPrice}</h3>
-        {/* <Link 
-          to={{
-            pathname: "/Receipt",
-            state: { cartItems, totalPrice }, // pass cart details and total price to the receipt page
-          }}
-        > */}
-          <button onClick={handlePaynow} className="proceed-payment">Proceed to Payment</button>
-        {/* </Link> */}
+          <button onClick={handlePayment} className="proceed-payment">Proceed to Payment</button>
       </div>
     </div>
   );
