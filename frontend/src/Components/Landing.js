@@ -26,7 +26,7 @@ export default function Landing() {
             <h2 className='typing-effect'>Welcome to your Smart Canteen</h2>
             <h2 className='mob-typing-effect'>Smart Canteen</h2>
             <p>Where technology meets taste!Enjoy a seamless, personalized dining experience designed just for you.</p>
-            <Link to="/login"><button>Get Started</button></Link>
+            <Link to="/login" ><button>Get Started</button></Link>
         </div>
       </section>
         

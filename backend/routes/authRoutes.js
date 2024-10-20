@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const userRouter = express.Router();
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models/userModel");
+const Staff = require("../models/staffModel");
 // const UserModel = require("../mod");
 
 // Registration Route User Register with  email, password, mobile
@@ -21,7 +22,7 @@ userRouter.post("/register", async (req, res) => {
           password: hash,
           name,
         };
-        // now in payload password will be hased
+        // now in payload password will be hashed
         const user = new UserModel(payload);
         await user.save();
         // response
@@ -72,6 +73,7 @@ userRouter.post("/login", async (req, res) => {
     res.status(400).send({ message: err.message });
   }
 });
+
 
 module.exports = userRouter;
 

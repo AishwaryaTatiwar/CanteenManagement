@@ -8,6 +8,29 @@
   width: 90%;
 }
 
+.headerStaff {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* background-color: #ffa500; */
+  background-color: #ffffff;
+  color:  #ffa500;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.add-staff-button {
+    margin-right: 70px;
+    background-color: white;
+    color: #ffa500;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    max-width: 190px;
+    max-height: 70px;
+  }
 .staff-list {
   flex-grow: 1; 
   background-color: white;
@@ -50,3 +73,85 @@ tbody td {
   background-color: #ff8000;
 }
 
+/* StaffPage.css */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it's on top */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 350px; /* Adjust width for form size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center the content */
+}
+
+.popup-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.popup-content form input,
+.popup-content form select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.popup-content form input:focus,
+.popup-content form select:focus {
+  outline: none;
+  border-color: #ffa500; /* Orange focus border */
+}
+
+.popup-content form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-content form button[type="submit"] {
+  background-color: #ffa500; /* Orange for submit button */
+  color: white;
+}
+
+.popup-content form button[type="button"] {
+  background-color: white;
+  color: #ffa500;
+  border: 1px solid #ffa500;
+}
+
+.popup-content form button:hover {
+  opacity: 0.4; /* Slight hover effect */
+}
