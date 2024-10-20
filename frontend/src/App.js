@@ -5,8 +5,8 @@ import AdminNavigation from "./admin/AdminNavigation.js";
 function App() {
   return (
     <div className="App">
-      <Navigation></Navigation>
-      {/* <AdminNavigation></AdminNavigation> */}
+      {/* <Navigation></Navigation> */}
+      <AdminNavigation></AdminNavigation>
     </div>
   );
 }

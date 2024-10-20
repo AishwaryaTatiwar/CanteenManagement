@@ -53,15 +53,40 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("hello world! Response from server");
 });
-app.get('/api/user', async (req, res) => {
+app.get("/api/user", async (req, res) => {
   try {
-      const user = await User.findOne(); // Fetch the first user
-      if (!user) {
-          return res.status(404).json({ message: 'User not found' });
-      }
-      res.json(user); // Send user data as response
+    const user = await User.findOne(); // Fetch the first user
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+    res.json(user); // Send user data as response
   } catch (err) {
-      res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+//to fetch users for admin panel
+const User = require("./models/userModel"); // Assuming you have a User model
+
+// Route to get all users
+// app.get("/api/user", async (req, res) => {
+//   try {
+//     const users = await User.find(); // Fetch all users
+//     res.json(users); // Send users data as a response
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: "Server error" });
+//   }
+// });
+app.get("/api/user2", async (req, res) => {
+  try {
+    const users = await User.find(); // Fetch all users
+    console.log("Fetched Users:", users); // Log the fetched users
+    res.json(users); // Send users data as a response
+  } catch (err) {
+    console.error(err);
+    // console.error(users);
+    res.status(500).json({ message: "Server error" });
   }
 });
 
