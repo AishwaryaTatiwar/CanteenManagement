@@ -8,8 +8,6 @@ const authRoutes = require("./routes/authRoutes"); // handles rotings
 const UserModel = require("./models/userModel");
 const Staff = require("./models/staffModel");
 
-
-
 const stripe = require("stripe")(
   "pk_test_51Q4ekwGfQYqZiDkV7tF6Q51ecYxNZG3YtzW2i8Jsol4rD8t6bsKbzgxvVUnW6E5nQr5jCUkoeVGcMAhs0YA90VKi00TSrYGcyg"
 ); //for stripe
@@ -59,32 +57,60 @@ app.get("/", (req, res) => {
 });
 app.get("/api/user", async (req, res) => {
   try {
-    const user = await UserModel.findOne(); // Fetch the first user
+    const user = await User.findOne(); // Fetch the first user
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
     res.json(user); // Send user data as response
   } catch (err) {
-      res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+//to fetch users for admin panel
+const User = require("./models/userModel"); // Assuming you have a User model
+
+// Route to get all users
+// app.get("/api/user", async (req, res) => {
+//   try {
+//     const users = await User.find(); // Fetch all users
+//     res.json(users); // Send users data as a response
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ message: "Server error" });
+//   }
+// });
+app.get("/api/user2", async (req, res) => {
+  try {
+    const users = await User.find(); // Fetch all users
+    console.log("Fetched Users:", users); // Log the fetched users
+    res.json(users); // Send users data as a response
+  } catch (err) {
+    console.error(err);
+    // console.error(users);
+    res.status(500).json({ message: "Server error" });
   }
 });
 const fetchUserDetails = async (req, res) => {
   const userId = req.params.userId; // Assuming userId is passed as a URL parameter
   try {
-      const user = await UserModel.findById(userId).select('-password'); // Fetch user by ID and exclude the password
+    const user = await UserModel.findById(userId).select("-password"); // Fetch user by ID and exclude the password
 
-      if (!user) {
-          return res.status(404).json({ success: false, message: "User not found" });
-      }
+    if (!user) {
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+    }
 
-      res.json({ success: true, data: user }); // Send the user data in response
+    res.json({ success: true, data: user }); // Send the user data in response
   } catch (error) {
-      console.log(error);
-      res.status(500).json({ success: false, message: "Error fetching user details" }); // Proper error handling
+    console.log(error);
+    res
+      .status(500)
+      .json({ success: false, message: "Error fetching user details" }); // Proper error handling
   }
 };
 app.get("/api/user/:userId", fetchUserDetails); // Define the route
-
 
 //Payment Routing
 app.post("/payment", (req, res) => {
@@ -121,7 +147,7 @@ app.post("/payment", (req, res) => {
     .then((result) => res.status(200).json(result))
     .catch((err) => console.log(err));
 });
-app.post('/api/staff', async (req, res) => {
+app.post("/api/staff", async (req, res) => {
   const { name, phone, work } = req.body;
   try {
     const newStaff = new Staff({ name, phone, work });
@@ -129,10 +155,21 @@ app.post('/api/staff', async (req, res) => {
     await savedStaff.save();
     res.status(200).send({ message: "Staff added successfully" });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to add staff' });
+    res.status(500).json({ error: "Failed to add staff" });
   }
 });
 
+// Fetch all staff
+app.get("/api/staff", async (req, res) => {
+  try {
+    const staff = await Staff.find(); // Fetch all staff members
+    console.log("Fetched Staff:", staff); // Log fetched staff members for debugging
+    res.json(staff); // Send staff data as a response
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
 
 // Start server
 //listen
